@@ -1,9 +1,12 @@
+@import "comman/styles/saas/variables";
+@import "comman/styles/saas/mixins";
+
 .title {
   position: relative;
   margin: 0 0 30px;
 
   h2 {
-    font: 300 36px/1.2 "Josefin Sans", sans-serif;
+    @include font($titleFontFamily, 36px, 300, 1.2);
     letter-spacing: 5px;
     text-transform: capitalize;
   }

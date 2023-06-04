@@ -1,22 +1,31 @@
-import React from 'react';
-import s from './Contacts.module.css';
-import styleContainer from '../../src/command/styles/Container.module.css';
-import t from '../command/styles/Title.module.css';
+import React from "react";
+import s from "Contacts/Contacts.module.scss";
+import { Title } from "comman/components/Title/Title";
 
 const Contacts = () => {
-    return (
-            <div className={s.contactsBlock}>
-                <div className={`${styleContainer.container} ${s.contactsContainer}`}>
-                    <h2 className={t.title}>Contacts</h2>
-                    <form className={s.form}>
-                        <input type="text"/>
-                        <input type="text"/>
-                        <textarea/>
-                    </form>
-                    <button className={s.btn}>Send</button>
-                </div>
-            </div>
-    );
+  return (
+    <div className={s.container}>
+      <Title title={"Contacts"} />
+      <form className={s.form}>
+        <input
+          type="text"
+          placeholder={"name"}
+          autoComplete={"off"}
+          className={s.input}
+        />
+        <input
+          type="text"
+          placeholder={"email"}
+          autoComplete={"off"}
+          className={s.input}
+        />
+        <textarea placeholder={"your message"} className={s.textarea} />
+        <button type={"submit"} className={s.button}>
+          Send
+        </button>
+      </form>
+    </div>
+  );
 };
 
 export default Contacts;
