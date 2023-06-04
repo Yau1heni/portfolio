@@ -1,23 +1,22 @@
-import React from 'react';
-import s from './Footer.module.css';
-import styleContainer from '../../src/command/styles/Container.module.css';
+import React from "react";
+import s from "Footer/Footer.module.scss";
+import { SocialIcon } from "comman/components/SocialIcon/SocialIcon";
+import { socialData } from "Footer/socialData";
 
-const Footer = ({name}: { name: string }) => {
-    return (
-            <div className={s.footerBlock}>
-                <div className={`${styleContainer.container} ${s.skillsContainer}`}>
-                    <h3>{name}</h3>
-                    <div className={s.containerItems}>
-                        <div className={s.item}>1</div>
-                        <div className={s.item}>2</div>
-                        <div className={s.item}>3</div>
-                        <div className={s.item}>4</div>
-                        <div className={s.item}>5</div>
-                    </div>
-                    <h4>©2022</h4>
-                </div>
-            </div>
-    );
+const Footer = () => {
+  const socialIconList = socialData.map((icon) => {
+    return <SocialIcon href={icon.iconHref} srcIcon={icon.iconSrc} />;
+  });
+
+  return (
+    <div className={s.footer}>
+      <div className={s.footerContainer}>
+        <h2>Yauheni</h2>
+        <div className={s.containerItems}>{socialIconList}</div>
+        <p>©2023. All rights reserved</p>
+      </div>
+    </div>
+  );
 };
 
 export default Footer;
