@@ -1,0 +1,109 @@
+@import "comman/styles/saas/mixins";
+@import "comman/styles/saas/variables";
+
+.main {
+  height: 90vh;
+  padding: 100px 0;
+  @include flex(row, center, center, wrap);
+  background-color: $bgSecondary;
+  @media screen and (max-width: 728px) {
+    align-items: center;
+    padding: 0;
+  }
+
+  .container {
+    @include container();
+    @include flex(row, space-around, center, nowrap);
+    @media screen and (max-width: 1024px) {
+      flex-direction: column;
+    }
+
+    .greeting {
+      @include flex(column, flex-start, flex-start, nowrap);
+      @media screen and (max-width: 728px) {
+        align-items: center;
+      }
+      span {
+        font-size: 16px;
+
+        &:nth-child(2) {
+          @include font($titleFontFamily, 50px, 700, 1.2);
+          letter-spacing: 5px;
+          margin: 10px 0;
+          @media screen and (max-width: 728px) {
+            @include font($titleFontFamily, 30px, 400, 1);
+            text-align: center;
+            letter-spacing: 1px;
+          }
+          span {
+            @include font($titleFontFamily, 50px, 700, 1.2);
+            position: relative;
+            z-index: 0;
+            display: inline-block;
+
+            &:before {
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 20px;
+              background-color: $primaryColor;
+              bottom: 0;
+              z-index: -1;
+            }
+            @media screen and (max-width: 728px) {
+              @include font($titleFontFamily, 36px, 400, 1.2);
+              align-items: center;
+              &:before {
+                height: 15px;
+                /*width: 50px;*/
+              }
+            }
+          }
+        }
+      }
+
+      h1 {
+        @include font($textFontFamily, 28px, 400, 1.8);
+      }
+    }
+
+    .photo {
+      position: relative;
+      z-index: 1;
+      @media screen and (max-width: 1024px) {
+        margin-top: 50px;
+      }
+
+      .image {
+        width: 300px;
+        height: 400px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-image: url("./../assets/image/photo.jpg");
+        background-position: 80% 0;
+
+        &:before {
+          content: "";
+          position: absolute;
+          height: 440px;
+          width: 300px;
+          border: 5px solid $primaryColor;
+          left: 15px;
+          top: -15px;
+          z-index: -1;
+        }
+        @media screen and (max-width: 768px) {
+          height: 360px;
+          width: 260px;
+          transition: 0.5s;
+
+          &:before {
+            height: 390px;
+            width: 260px;
+            transition: 0.5s;
+          }
+        }
+      }
+    }
+  }
+}
