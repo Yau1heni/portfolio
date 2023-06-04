@@ -1,5 +1,6 @@
 import React from "react";
 import s from "Projects/Project/Project.module.scss";
+import { Button } from "comman/components/Button/Button";
 
 type ProjectPropsType = {
   title: string;
@@ -18,9 +19,7 @@ const Project = ({
     <div className={s.project}>
       <div className={s.imgContainer}>
         <img src={imageUrl} alt={title} className={s.img} />
-        <a href={projectLink} className={s.buttonLink} target="_blank">
-          Open
-        </a>
+        <Button text={"Open"} href={projectLink} />
       </div>
       <div className={s.descriptionContainer}>
         <h3 className={s.projectTitle}>{title}</h3>

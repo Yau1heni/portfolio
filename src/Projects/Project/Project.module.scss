@@ -19,17 +19,6 @@
       height: 100%;
     }
 
-    .buttonLink {
-      position: absolute;
-      background: #8d7d7d;
-      color: white;
-      padding: 10px 20px;
-      text-decoration: none;
-      border-radius: 3px;
-      opacity: 0.8;
-      cursor: pointer;
-    }
-
     &::before {
       position: absolute;
       content: "";
