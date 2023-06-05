@@ -4,6 +4,7 @@
 .main {
   height: 90vh;
   padding: 100px 0;
+  position: relative;
   @include flex(row, center, center, wrap);
   background-color: $bgSecondary;
   @media screen and (max-width: 728px) {
@@ -17,7 +18,6 @@
     @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
-
     .greeting {
       @include flex(column, flex-start, flex-start, nowrap);
       @media screen and (max-width: 728px) {
