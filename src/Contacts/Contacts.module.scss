@@ -16,6 +16,7 @@
 
     .input,
     .textarea {
+      width: 100%;
       background: $bgSecondary;
       border: 1px solid #4a4a4a;
       box-sizing: border-box;
@@ -59,11 +60,16 @@
       transition: all 0.4s ease-in-out 0s;
     }
 
-    .button[type="submit"] {
-      @extend .button;
-      position: relative;
-      align-self: center;
-      margin-top: 30px;
+    .containerButton {
+      display: flex;
+      justify-content: center;
+
+      .button[type="submit"] {
+        @extend .button;
+        position: relative;
+        align-self: center;
+        margin-top: 30px;
+      }
     }
   }
 }

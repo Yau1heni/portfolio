@@ -4,8 +4,12 @@ import github from "./../assets/icon/github.svg";
 import codewars from "./../assets/icon/codewars.svg";
 
 export const socialData = [
-  { iconHref: "https://t.me/Yau1heni", iconSrc: telegram },
-  { iconHref: "mailto:yau1heni@gmail.com", iconSrc: gmail },
-  { iconHref: "https://github.com/Yau1heni", iconSrc: github },
-  { iconHref: "https://www.codewars.com/users/Yau1heni", iconSrc: codewars },
+  { id: 1, iconHref: "https://t.me/Yau1heni", iconSrc: telegram },
+  { id: 2, iconHref: "mailto:yau1heni@gmail.com", iconSrc: gmail },
+  { id: 3, iconHref: "https://github.com/Yau1heni", iconSrc: github },
+  {
+    id: 4,
+    iconHref: "https://www.codewars.com/users/Yau1heni",
+    iconSrc: codewars,
+  },
 ];

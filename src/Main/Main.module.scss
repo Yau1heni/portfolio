@@ -2,7 +2,7 @@
 @import "comman/styles/saas/variables";
 
 .main {
-  height: 90vh;
+  height: 100vh;
   padding: 100px 0;
   position: relative;
   @include flex(row, center, center, wrap);
@@ -18,11 +18,13 @@
     @media screen and (max-width: 1024px) {
       flex-direction: column;
     }
+
     .greeting {
       @include flex(column, flex-start, flex-start, nowrap);
       @media screen and (max-width: 728px) {
         align-items: center;
       }
+
       span {
         font-size: 16px;
 
@@ -35,6 +37,7 @@
             text-align: center;
             letter-spacing: 1px;
           }
+
           span {
             @include font($titleFontFamily, 50px, 700, 1.2);
             position: relative;
@@ -50,6 +53,7 @@
               bottom: 0;
               z-index: -1;
             }
+
             @media screen and (max-width: 728px) {
               @include font($titleFontFamily, 36px, 400, 1.2);
               align-items: center;
@@ -60,10 +64,12 @@
             }
           }
         }
-      }
 
-      h1 {
-        @include font($textFontFamily, 28px, 400, 1.8);
+        &:nth-child(3) {
+          div {
+            @include font($textFontFamily, 28px, 400, 1.8);
+          }
+        }
       }
     }
 
@@ -92,6 +98,7 @@
           top: -15px;
           z-index: -1;
         }
+
         @media screen and (max-width: 768px) {
           height: 360px;
           width: 260px;

@@ -5,6 +5,15 @@
   border: 0;
 }
 
+a:hover,
+a {
+  text-decoration: none;
+}
+
+a {
+  color: #fff;
+}
+
 html {
   scroll-behavior: smooth;
 }

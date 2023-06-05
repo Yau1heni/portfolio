@@ -1,0 +1,22 @@
+@import "comman/styles/saas/mixins";
+@import "comman/styles/saas/variables";
+
+.nav {
+  display: flex;
+  width: 340px;
+  justify-content: space-between;
+  color: #fff;
+  margin-right: 50px;
+
+  a {
+    @include font($titleFontFamily, 20px, 400, 1.2);
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+  .active {
+    color: $primaryColor;
+    @include font($titleFontFamily, 24px, 700, 1.2);
+  }
+}
