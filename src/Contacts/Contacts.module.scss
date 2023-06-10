@@ -23,7 +23,7 @@
       @include font(inherit, 16px, 400, 1.5);
       outline: none;
       color: #495057;
-      margin-bottom: 1.2rem;
+      margin-top: 1.2rem;
 
       &:-webkit-autofill {
         -webkit-text-fill-color: #495057;
@@ -50,6 +50,7 @@
     }
 
     .textarea {
+      margin-top: 20px;
       min-height: 160px;
       padding: 15px;
       resize: none;
@@ -58,6 +59,15 @@
     &:focus {
       border: 1px solid transparent;
       transition: all 0.4s ease-in-out 0s;
+    }
+
+    p {
+      color: #bf1616;
+    }
+
+    p::before {
+      display: inline;
+      content: "⚠ ";
     }
 
     .containerButton {
