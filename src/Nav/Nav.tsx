@@ -1,20 +1,20 @@
 import React from "react";
-import s from "Nav/Nav.module.scss";
+import s from "./Nav.module.scss";
 import { Link } from "react-scroll";
 
 const Nav = () => {
   return (
     <div className={s.nav}>
-      <Link activeClass={s.active} to={"main"} spy>
+      <Link activeClass={s.active} offset={-10} to={"main"} spy>
         Main
       </Link>
-      <Link activeClass={s.active} to={"skills"} spy>
+      <Link activeClass={s.active} offset={-10} to={"skills"} spy>
         Skills
       </Link>
-      <Link activeClass={s.active} to={"projects"} spy>
+      <Link activeClass={s.active} offset={-10} to={"projects"} spy>
         Projects
       </Link>
-      <Link activeClass={s.active} to={"contacts"} spy>
+      <Link activeClass={s.active} offset={-10} to={"contacts"} spy>
         Contacts
       </Link>
     </div>
@@ -22,4 +22,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
