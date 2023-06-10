@@ -1,7 +1,7 @@
-import telegram from "./../assets/icon/telegram.svg";
-import gmail from "./../assets/icon/gmail.svg";
-import github from "./../assets/icon/github.svg";
-import codewars from "./../assets/icon/codewars.svg";
+import telegram from "./../assets/icon/social/telegram.svg";
+import gmail from "./../assets/icon/social/gmail.svg";
+import github from "./../assets/icon/social/github.svg";
+import codewars from "./../assets/icon/social/codewars.svg";
 
 export const socialData = [
   { id: 1, iconHref: "https://t.me/Yau1heni", iconSrc: telegram },
