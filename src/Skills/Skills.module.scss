@@ -1,0 +1,10 @@
+@import "comman/styles/saas/mixins";
+
+.container {
+  @include container();
+  @include flex(column, flex-start, center, nowrap);
+
+  .skills {
+    @include flex(row, space-between, center, wrap);
+  }
+}

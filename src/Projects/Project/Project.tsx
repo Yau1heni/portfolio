@@ -1,5 +1,5 @@
 import React from "react";
-import s from "Projects/Project/Project.module.scss";
+import s from "./Project.module.scss";
 import { Button } from "comman/components/Button/Button";
 
 type ProjectPropsType = {

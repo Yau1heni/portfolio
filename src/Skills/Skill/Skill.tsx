@@ -1,19 +1,17 @@
-import React from 'react';
-import s from './Skill.module.css';
+import React from "react";
+import s from "Skills/Skill/Skill.module.scss";
 
 type SkillPropsType = {
-    title: string
-    description: string
-}
-
-const Skill = ({title, description}: SkillPropsType) => {
-    return (
-            <div className={s.skill}>
-                <div className={s.icon}></div>
-                <h3>{title}</h3>
-                <span className={s.description}>{description}</span>
-            </div>
-    );
+  src: string;
+  title: string;
+  width?: number;
 };
 
-export default Skill;
+export const Skill = ({ title, src, width }: SkillPropsType) => {
+  return (
+    <div className={s.skill}>
+      <img className={s.image} width={width} src={src} />
+      <span className={s.description}>{title}</span>
+    </div>
+  );
+};

@@ -1,0 +1,15 @@
+@import "comman/styles/saas/mixins";
+
+.skill {
+  @include flex(column, center, center, nowrap);
+  padding: 20px;
+  margin: 20px;
+
+  .image {
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
