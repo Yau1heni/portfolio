@@ -2,12 +2,17 @@ import React from "react";
 import s from "./Projects.module.scss";
 import Project from "./Project/Project";
 import { Title } from "comman/components/Title/Title";
-import todoImg from "./../assets/image/todolist.png";
+import todo from "./../assets/image/todo.jpg";
+import cards from "./../assets/image/cards.jpg";
+import burger from "./../assets/image/burger.jpg";
 import { Fade } from "react-awesome-reveal";
 
 const PROJECT_LINK = {
-  TODO: "http://localhost:3001/",
+  TODO: "https://Yau1heni.github.io/todolist",
+  CARDS: "https://Yau1heni.github.io/cards",
+  BURGER_HOUSE: "https://yau1heni.github.io/burger-house",
 };
+
 const Projects = () => {
   return (
     <div className={s.projects} id={"projects"}>
@@ -17,21 +22,21 @@ const Projects = () => {
           <div className={s.projectsContent}>
             <Project
               projectLink={PROJECT_LINK.TODO}
-              imageUrl={todoImg}
+              imageUrl={todo}
               title="Todolist"
-              description="Some descriptiddddv erg erg erdsererg reg er eg efv  vre veg e  adasda da ad aon...Lorem "
+              description="Application build with ReactJS/Redux-Toolkit/TypeScript/MUI/Storybook/Jest and etc."
             />
             <Project
-              projectLink={PROJECT_LINK.TODO}
-              imageUrl={todoImg}
-              title="Inctagram"
-              description="Some description..."
+              projectLink={PROJECT_LINK.CARDS}
+              imageUrl={cards}
+              title="Learning App"
+              description="Application build with ReactJS/Redux-Toolkit/TypeScript/MUI/Formik and etc."
             />
             <Project
-              projectLink={PROJECT_LINK.TODO}
-              imageUrl={todoImg}
-              title="Cards"
-              description="Some description..."
+              projectLink={PROJECT_LINK.BURGER_HOUSE}
+              imageUrl={burger}
+              title="Burger house"
+              description="Application build with Angular/SCSS"
             />
           </div>
         </Fade>
