@@ -61,7 +61,7 @@ const Skills = () => {
         <div className={s.skills}>{listMainSkills}</div>
       </Fade>
       <Fade direction={"right"}>
-        <div className={s.skills}>{listOtherSkills}</div>
+        <div className={`${s.skills} ${s.skillsOther}`}>{listOtherSkills}</div>
       </Fade>
     </div>
   );
