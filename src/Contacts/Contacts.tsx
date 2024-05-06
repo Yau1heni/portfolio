@@ -4,6 +4,7 @@ import { Title } from "comman/components/Title/Title";
 import { Fade } from "react-awesome-reveal";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { emailSendAPI, FormsType } from "api/emailSendAPI";
+import { toast } from "react-toastify";
 
 const EMAIL_REGEX = /^\w[\w-.]*@[\w-]+\.[a-z]{2,7}$/i;
 
@@ -16,9 +17,31 @@ const Contacts = () => {
     mode: "onTouched",
     reValidateMode: "onChange",
   });
+
   const onSubmit: SubmitHandler<FormsType> = (data) => {
     if (!data.name || !data.email) return;
-    emailSendAPI.send(data).then();
+    const id = toast.loading("Please wait...");
+
+    emailSendAPI
+      .send(data)
+      .then(() => {
+        toast.update(id, {
+          render: "Message sent successfully",
+          type: "success",
+          isLoading: false,
+          closeOnClick: true,
+          autoClose: 8000,
+        });
+      })
+      .catch(() => {
+        toast.update(id, {
+          render: "Something went wrong :( Please contact me in another way",
+          type: "error",
+          isLoading: false,
+          closeOnClick: true,
+          autoClose: 8000,
+        });
+      });
   };
 
   return (

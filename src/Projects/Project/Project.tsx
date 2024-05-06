@@ -1,4 +1,3 @@
-import React from "react";
 import s from "./Project.module.scss";
 import { Button } from "comman/components/Button/Button";
 
@@ -7,6 +6,7 @@ type ProjectPropsType = {
   description: string;
   imageUrl: string;
   projectLink: string;
+  stack: string;
 };
 
 const Project = ({
@@ -14,6 +14,7 @@ const Project = ({
   description,
   imageUrl,
   projectLink,
+  stack,
 }: ProjectPropsType) => {
   return (
     <div className={s.project}>
@@ -23,7 +24,8 @@ const Project = ({
       </div>
       <div className={s.descriptionContainer}>
         <h3 className={s.projectTitle}>{title}</h3>
-        <span className={s.description}>{description}</span>
+        <span>{description}</span>
+        <span>Stack: {stack}</span>
       </div>
     </div>
   );

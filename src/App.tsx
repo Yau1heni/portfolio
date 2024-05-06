@@ -6,6 +6,8 @@ import Skills from "./Skills/Skills";
 import Projects from "./Projects/Projects";
 import Contacts from "./Contacts/Contacts";
 import Footer from "./Footer/Footer";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -16,6 +18,17 @@ function App() {
       <Projects />
       <Contacts />
       <Footer />
+
+      <ToastContainer
+        position="bottom-left"
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </div>
   );
 }

@@ -2,16 +2,21 @@ import React from "react";
 import s from "./Projects.module.scss";
 import Project from "./Project/Project";
 import { Title } from "comman/components/Title/Title";
-import todo from "./../assets/image/todo.jpg";
-import cards from "./../assets/image/cards.jpg";
-import burger from "./../assets/image/burger.jpg";
 import { Fade } from "react-awesome-reveal";
+import { projectsData } from "Projects/data/projectsData";
 
-const PROJECT_LINK = {
-  TODO: "https://Yau1heni.github.io/todolist",
-  CARDS: "https://Yau1heni.github.io/cards",
-  BURGER_HOUSE: "https://yau1heni.github.io/burger-house",
-};
+const projectsList = projectsData.map(
+  ({ description, src, title, link, stack, id }) => (
+    <Project
+      key={id}
+      description={description}
+      imageUrl={src}
+      title={title}
+      projectLink={link}
+      stack={stack}
+    />
+  )
+);
 
 const Projects = () => {
   return (
@@ -19,26 +24,7 @@ const Projects = () => {
       <div className={s.projectsContainer}>
         <Title title={"Projects"} />
         <Fade direction={"left"}>
-          <div className={s.projectsContent}>
-            <Project
-              projectLink={PROJECT_LINK.TODO}
-              imageUrl={todo}
-              title="Todolist"
-              description="Application build with ReactJS/Redux-Toolkit/TypeScript/MUI/Storybook/Jest and etc."
-            />
-            <Project
-              projectLink={PROJECT_LINK.CARDS}
-              imageUrl={cards}
-              title="Learning App"
-              description="Application build with ReactJS/Redux-Toolkit/TypeScript/MUI/Formik and etc."
-            />
-            <Project
-              projectLink={PROJECT_LINK.BURGER_HOUSE}
-              imageUrl={burger}
-              title="Burger house"
-              description="Application build with Angular/SCSS"
-            />
-          </div>
+          <div className={s.projectsContent}>{projectsList}</div>
         </Fade>
       </div>
     </div>

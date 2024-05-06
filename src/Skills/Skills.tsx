@@ -18,6 +18,7 @@ import axios from "assets/icon/skills/axios.png";
 import sass from "assets/icon/skills/sass.png";
 import rrd from "assets/icon/skills/rrd.png";
 import html from "assets/icon/skills/HTML5.png";
+import ant from "assets/icon/skills/ant-design.svg";
 
 type SkillsType = {
   src: string;
@@ -33,7 +34,6 @@ const mainSkills: SkillsType[] = [
 
 const otherSkills: SkillsType[] = [
   { src: next, title: "Next" },
-
   { src: restApi, title: "Rest API" },
   { src: axios, title: "Axios" },
   { src: rrd, title: "React-router-dom" },
@@ -41,6 +41,7 @@ const otherSkills: SkillsType[] = [
   { src: jest, title: "Jest" },
   { src: html, title: "HTML5" },
   { src: mui, title: "MUI" },
+  { src: ant, title: "Ant Design" },
   { src: postman, title: "Postman" },
   { src: storybook, title: "Storybook" },
   { src: sass, title: "sass/scss/css" },
