@@ -4,7 +4,7 @@ import burger from "../../assets/image/burger.png";
 import cleverfit from "../../assets/image/cleverfit.png";
 import inc from "../../assets/image/inc.png";
 import incAdmin from "../../assets/image/inc-admin.png";
-import mem from "../../assets/image/mem.png";
+import cookies from "../../assets/image/cookies.jpg";
 import crm from "../../assets/image/crm.png";
 import blog from "../../assets/image/blog.png";
 
@@ -81,12 +81,11 @@ export const projectsData = [
   },
   {
     id: 9,
-    link: "https://yau1heni.github.io/cssMemSlider/",
-    src: mem,
-    title: "Mem Slider",
-    description:
-      "A few local memes from RsSchool. Don't take it seriously. It's just funny :)",
-    stack: "Only CSS/HTML, only hardcore! :)",
+    link: "https://yau1heni.github.io/cookies/",
+    src: cookies,
+    title: "Cookies app",
+    description: "Cookies ordering app",
+    stack: "Angular, SCSS",
   },
 ];
 
